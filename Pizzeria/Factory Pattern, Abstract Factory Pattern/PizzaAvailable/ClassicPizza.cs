@@ -23,5 +23,11 @@ namespace Pizzeria.Factory_Pattern__Abstract_Factory_Pattern.PizzaAvailable
             ClassicPizzaIngredientFactory classic = new ClassicPizzaIngredientFactory();
             return $"{GetName()}:\n {classic.PrintPizzaIngredient()}";
         }
+
+        // Новий метод для отримання назви піци для Builder Pattern
+        public static string GetPizzaName()
+        {
+            return new ClassicPizza(null).GetName();
+        }
     }
 }

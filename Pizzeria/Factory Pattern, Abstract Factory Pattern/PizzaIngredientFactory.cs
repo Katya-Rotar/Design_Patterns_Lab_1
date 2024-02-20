@@ -13,9 +13,9 @@ namespace Pizzeria.Factory_Pattern__Abstract_Factory_Pattern
         {
             switch (name)
             {
-                case "Pepperoni":
+                case "Pepperoni Pizza":
                     return new PepperoniPizzaIngredientFactory();
-                case "Classic":
+                case "Classic Pizza":
                     return new ClassicPizzaIngredientFactory();
                 default:
                     Console.WriteLine($"Unknown pizza type: {name}");

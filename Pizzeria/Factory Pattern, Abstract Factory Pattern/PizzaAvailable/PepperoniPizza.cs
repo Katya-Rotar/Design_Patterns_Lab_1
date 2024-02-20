@@ -1,5 +1,6 @@
 ﻿using Pizzeria.Factory_Pattern;
 using Pizzeria.Factory_Pattern__Abstract_Factory_Pattern.Interface;
+using Pizzeria.Factory_Pattern__Abstract_Factory_Pattern.PizzaAvailable;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,6 +24,12 @@ namespace Pizzeria.Factory_Pattern__Abstract_Factory_Pattern
         {
             PepperoniPizzaIngredientFactory pepperoni = new PepperoniPizzaIngredientFactory();
             return $"{GetName()}:\n {pepperoni.PrintPizzaIngredient()}";
+        }
+
+        // Новий метод для отримання назви піци для Builder Pattern
+        public static string GetPizzaName()
+        {
+            return new PepperoniPizza(null).GetName();
         }
     }
 }
