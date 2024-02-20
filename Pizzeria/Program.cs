@@ -63,5 +63,11 @@ internal class Program
             Console.WriteLine($"{item.Name} - {item.Price} ГРН");
         }
         Console.WriteLine($"Total: {order.CalculateTotal()} ГРН");
+
+        Console.WriteLine("\n_____________________Prototype Pattern_____________________\n");
+        Pizza clonedPizza_1 = (Pizza)pepperoniPizza.Clone();
+        Console.WriteLine(clonedPizza_1.PrintPizza());
+        Pizza clonedPizza_2 = (Pizza)classicPizza.Clone();
+        Console.WriteLine(clonedPizza_2.PrintPizza());
     }
 }

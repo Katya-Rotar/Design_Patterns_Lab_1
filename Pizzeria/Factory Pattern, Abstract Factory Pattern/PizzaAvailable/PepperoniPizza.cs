@@ -31,5 +31,12 @@ namespace Pizzeria.Factory_Pattern__Abstract_Factory_Pattern
         {
             return new PepperoniPizza(null).GetName();
         }
+
+        //Prototype Pattern
+        public override ICloneable Clone()
+        {
+            PepperoniPizza clone = new PepperoniPizza(this.ingredientFactory);
+            return clone;
+        }
     }
 }

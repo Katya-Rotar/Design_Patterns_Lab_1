@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Pizzeria.Factory_Pattern__Abstract_Factory_Pattern
 {
-    public abstract class Pizza
+    public abstract class Pizza : ICloneable
     {
 
         public IPizzaIngredientFactory ingredientFactory;
@@ -20,5 +20,8 @@ namespace Pizzeria.Factory_Pattern__Abstract_Factory_Pattern
 
         public abstract string GetName();
         public abstract string PrintPizza();
+
+        //Prototype Pattern
+        public abstract object Clone();
     }
 }

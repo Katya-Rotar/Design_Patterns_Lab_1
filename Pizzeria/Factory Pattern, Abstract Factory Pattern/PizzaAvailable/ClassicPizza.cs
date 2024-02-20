@@ -29,5 +29,12 @@ namespace Pizzeria.Factory_Pattern__Abstract_Factory_Pattern.PizzaAvailable
         {
             return new ClassicPizza(null).GetName();
         }
+
+        //Prototype Pattern
+        public override ICloneable Clone()
+        {
+            ClassicPizza clone = new ClassicPizza(this.ingredientFactory);
+            return clone;
+        }
     }
 }
