@@ -20,6 +20,8 @@ namespace Pizzeria.Factory_Pattern
                     return new PepperoniPizza(new PepperoniPizzaIngredientFactory());
                 case "Classic Pizza":
                     return new ClassicPizza(new ClassicPizzaIngredientFactory());
+                case "Capricciosa Pizza":
+                    return new CapricciosaPizza(new CapricciosaPizzaIngredientFactory());
                 default:
                     Console.WriteLine($"Unknown pizza type: {type}");
                     return null;

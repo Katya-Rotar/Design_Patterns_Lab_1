@@ -18,6 +18,7 @@ namespace Pizzeria.Builder_Pattern
             
             MenuItems.Add(new PizzaItem { Name = ClassicPizza.GetPizzaName(), Price = 200});
             MenuItems.Add(new PizzaItem { Name = PepperoniPizza.GetPizzaName(), Price = 240});
+            MenuItems.Add(new PizzaItem { Name = CapricciosaPizza.GetPizzaName(), Price = 225 });
         }
     }
 }

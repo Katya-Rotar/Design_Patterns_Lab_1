@@ -31,10 +31,10 @@ internal class Program
         }
 
         // Замовлення класичної піци
-        Pizza classicPizza = pizzaFactory.CreatePizza("Classic Pizza");
-        if (classicPizza != null)
+        Pizza capricciosa = pizzaFactory.CreatePizza("Capricciosa Pizza");
+        if (capricciosa != null)
         {
-            Console.WriteLine(classicPizza.PrintPizza());
+            Console.WriteLine(capricciosa.PrintPizza());
         }
 
         Console.WriteLine("_____________________Builder Pattern_____________________");
@@ -53,7 +53,7 @@ internal class Program
 
         OrderBuilder builder = new OrderBuilder();
         Order order = builder.AddPizza(menu.MenuItems[0]) // Додаємо першу піцу з меню до замовлення
-                             .AddPizza(menu.MenuItems[1]) // Додаємо другу піцу з меню до замовлення
+                             .AddPizza(menu.MenuItems[2]) // Додаємо другу піцу з меню до замовлення
                              .Build(); // Побудова замовлення
 
         // Виведення деталей замовлення та загальної суми
@@ -67,7 +67,7 @@ internal class Program
         Console.WriteLine("\n_____________________Prototype Pattern_____________________\n");
         Pizza clonedPizza_1 = (Pizza)pepperoniPizza.Clone();
         Console.WriteLine(clonedPizza_1.PrintPizza());
-        Pizza clonedPizza_2 = (Pizza)classicPizza.Clone();
+        Pizza clonedPizza_2 = (Pizza)capricciosa.Clone();
         Console.WriteLine(clonedPizza_2.PrintPizza());
     }
 }

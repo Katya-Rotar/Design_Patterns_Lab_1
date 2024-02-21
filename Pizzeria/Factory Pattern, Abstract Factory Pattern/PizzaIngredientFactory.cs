@@ -1,4 +1,5 @@
 ﻿using Pizzeria.Factory_Pattern;
+using Pizzeria.Factory_Pattern__Abstract_Factory_Pattern.PizzaAvailable;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +18,8 @@ namespace Pizzeria.Factory_Pattern__Abstract_Factory_Pattern
                     return new PepperoniPizzaIngredientFactory();
                 case "Classic Pizza":
                     return new ClassicPizzaIngredientFactory();
+                case "Capricciosa Pizza":
+                    return new CapricciosaPizzaIngredientFactory();
                 default:
                     Console.WriteLine($"Unknown pizza type: {name}");
                     return null;
